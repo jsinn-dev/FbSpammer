@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Facebook Spammer",
+  "description": "Inonde le chat messenger de votre choix.",
+  "version": "1.0",
+  
+  "icons": { "19": "icon.png"},
+  
+  "content_scripts": [
+    {
+		"matches": ["http://messenger.com/*", "http://www.messenger.com/*", "https://messenger.com/*", "https://www.messenger.com/*"],
+		"js": ["jquery.min.js", "myscript.js"]
+    }
+  ],
+  "permissions": [
+	  "tabs",
+	  "clipboardRead",
+	  "clipboardWrite"
+	]
+}
